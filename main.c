@@ -61,6 +61,15 @@ int main() {
     return 0;
 }
 
+/**
+ * Function: getUserChoice
+ * --------------------------
+ * 
+ * Displays a menu of options and prompts the user to select a choice by inputting a number.
+ * Returns the user's choice as an integer.
+ * 
+ * @return: an integer representing the user's choice.   
+ */
 static int getUserChoice(){
     int choice = 0;
 
@@ -97,25 +106,3 @@ static int getUserChoice(){
     return choice;
 }
 
-// static char *uniGetError(result res){
-//     switch (res){
-//         case UNI_SUCCESS:
-//             return "Success";
-//         case UNI_FAILURE:
-//             return "Failure";
-//         case UNI_NULL_ARG:
-//             return "Null argument";
-//         case UNI_INVALID_SIZE:
-//             return "Invalid size";
-//         case UNI_OUT_OF_MEMORY:
-//             return "Out of memory";
-//         case UNI_INVALID_DATA:
-//             return "Invalid data";
-//         case UNI_DATA_ALREADY_EXISTS:
-//             return "Data already exists";
-//         case UNI_IS_FULL:
-//             return "Set is full";
-//         default:
-//             return "Unknown error";
-//     }
-// }

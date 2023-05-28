@@ -43,7 +43,14 @@ CourseGrade buildCourseGrade(Course course, int num_of_courses){
         }
 
         printf("Please enter course grade (0-100): ");
-        scanf("%f",&grade);
+        while(1){
+            if(scanf("%f", &grade) == 1 && grade >= 0 && grade <= 100){
+                break;
+            } else {
+                while (getchar() != '\n') {}
+                printf("Invalid grade. Please enter a number between 0 and 100: ");
+            }
+        }
 
         CourseGrade new_grade = course_grade_create(curr_course, id, grade);
         if(new_grade == NULL){
@@ -102,7 +109,13 @@ result removeGradeById(CourseGrade *Cg, int course_id){
 }
 
 void gradePrint(CourseGrade Cg){
+
     CourseGrade curr = Cg;
+
+    if(curr == NULL){
+        printf("There is no grades in the list.");
+        return;
+    }
     while(curr != NULL){
         printf("Course id:%d - grade:%.0f\n",curr->course_id ,curr->grade);
         

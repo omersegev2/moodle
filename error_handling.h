@@ -20,6 +20,7 @@ typedef enum {
     LIST_IS_FULL,
 } result;
 
+
 char *GetError(result res);
 
 #endif //_ERROR_HANDLING_H_

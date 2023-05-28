@@ -6,7 +6,7 @@ SRCS =  course.c course_grade.c main.c student.c university.c error_handling.c
 OBJS = $(SRCS:.c=.o)
 
 all: main
-	valgrind -s --leak-check=yes --track-origins=yes --log-file=valgrind.rpt ./main
+	./main
 
 main: $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o main
