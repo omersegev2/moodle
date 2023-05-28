@@ -152,10 +152,16 @@ result editCourse(University U){
 }
 
 void printStudents(University U){
+    if(U->students == NULL){
+        printf("Error: there is no student in the list.\n");
+    }
     studentsPrint(U->students);
 }
 
 void printCourses(University U){
+    if(U->courses == NULL){
+        printf("Error: there is no courses in the list.\n");
+    }
     coursesPrint(U->courses);
 }
 
